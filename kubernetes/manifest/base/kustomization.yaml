@@ -1,8 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
 resources:
-  - open-webui.yaml
-  - ollama-service.yaml
-  - ollama-statefulset.yaml
   - webui-deployment.yaml
   - webui-service.yaml
-  - webui-ingress.yaml
   - webui-pvc.yaml
+  - webui-ingress.yaml
+  - open-webui.yaml
+  - db-secret.yaml

@@ -1,4 +1,8 @@
-# Helm Charts
-Open WebUI Helm Charts are now hosted in a separate repo, which can be found here: https://github.com/open-webui/helm-charts 
+# Open WebUI Helm Charts
+Helm charts for the [Open WebUI](https://github.com/open-webui/open-webui) application.
 
-The charts are released at https://helm.openwebui.com. 
+## Downloading the Chart
+The charts are hosted at https://helm.openwebui.com. You can add the Helm repo with:
+```
+helm repo add open-webui https://helm.openwebui.com/
+``` 

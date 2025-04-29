@@ -7,7 +7,7 @@
 		<link rel="icon" type="image/svg+xml" href="/static/favicon.svg" />
 		<link rel="shortcut icon" href="/static/favicon.ico" />
 		<link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
-		<meta name="apple-mobile-web-app-title" content="Open WebUI" />
+		<meta name="apple-mobile-web-app-title" content="GRV Service Knowledge" />
 
 		<link rel="manifest" href="/manifest.json" />
 		<meta
@@ -16,11 +16,11 @@
 		/>
 		<meta name="theme-color" content="#171717" />
 		<meta name="robots" content="noindex,nofollow" />
-		<meta name="description" content="Open WebUI" />
+		<meta name="description" content="GRV Service Knowledge" />
 		<link
 			rel="search"
 			type="application/opensearchdescription+xml"
-			title="Open WebUI"
+			title="GRV Service Knowledge"
 			href="/opensearch.xml"
 		/>
 		<script src="/static/loader.js" defer></script>
@@ -38,7 +38,10 @@
 				const prefersDarkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 				if (!localStorage?.theme) {
-					localStorage.theme = 'system';
+					localStorage.theme = 'rose-pine-dawn light';
+					// Default theme is set in stores/index.ts, but localStorage might be empty initially
+					// We'll let the Svelte component handle the default if localStorage is empty
+					// Or, explicitly set it here if needed: localStorage.theme = 'rose-pine-dawn light';
 				}
 
 				if (localStorage.theme === 'system') {
@@ -54,13 +57,28 @@
 				} else if (localStorage.theme === 'light') {
 					document.documentElement.classList.add('light');
 					metaThemeColorTag.setAttribute('content', '#ffffff');
+				} else if (localStorage.theme === 'rose-pine-dawn light') {
+					document.documentElement.classList.add('light');
+					document.documentElement.classList.add('rose-pine-dawn');
+					// Optional: Set meta theme color if desired, e.g., white or a specific rose-pine-dawn color
+					metaThemeColorTag.setAttribute('content', '#ffffff'); // Example: setting to white
 				} else if (localStorage.theme === 'her') {
 					document.documentElement.classList.add('dark');
 					document.documentElement.classList.add('her');
 					metaThemeColorTag.setAttribute('content', '#983724');
-				} else {
+				} else if (localStorage.theme) {
+					// Fallback for other potential dark themes (like 'dark' or 'rose-pine dark')
 					document.documentElement.classList.add('dark');
+					// Add specific theme class if needed, e.g.:
+					// if (localStorage.theme === 'rose-pine dark') { document.documentElement.classList.add('rose-pine'); }
 					metaThemeColorTag.setAttribute('content', '#171717');
+				} else {
+					// If localStorage.theme is still not set (e.g., first visit), default based on system or explicit default
+					// This part might be redundant if the Svelte component handles it, but good for initial FOUC prevention
+					// Applying rose-pine-dawn light as the ultimate fallback/default here
+					document.documentElement.classList.add('light');
+					document.documentElement.classList.add('rose-pine-dawn');
+					metaThemeColorTag.setAttribute('content', '#ffffff');
 				}
 
 				window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
@@ -101,7 +119,7 @@
 			})();
 		</script>
 
-		<title>Open WebUI</title>
+		<title>GRV Service Knowledge</title>
 
 		%sveltekit.head%
 	</head>

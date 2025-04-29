@@ -34,6 +34,13 @@ RestrictedPython==8.0
 loguru==0.7.2
 asgiref==3.8.1
 
+
+# Azure
+
+azure-ai-projects
+azure-identity
+azure-ai-evaluation
+
 # AI libraries
 openai
 anthropic

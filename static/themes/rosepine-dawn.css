@@ -1,140 +1,154 @@
 .rose-pine-dawn * {
-	color: #575279 !important;
-	stroke: #d7827e !important;
+	color: #231F20 !important; /* Default text color: deep charcoal */
+	stroke: #A51E36 !important; /* Default stroke: brand red */
 }
 
 .rose-pine-dawn .app > * {
-	background-color: #faf4ed !important;
+	background-color: #FFFFFF !important; /* Main app background */
 }
 
 .rose-pine-dawn #nav {
-	background-color: #fffaf3;
+	background-color: #FFFFFF !important; /* Navigation bar: clean white */
 }
 
 .rose-pine-dawn .py-2\.5.my-auto.flex.flex-col.justify-between.h-screen {
-	background: #f2e9e1;
+	background: #F5F2F0 !important; /* Sidebar or full-height elements: light grey for gentle contrast */
 }
 
 .rose-pine-dawn .bg-white.dark\:bg-gray-800 {
-	background: #f2e9e1;
+	background: #FFFFFF !important; /* Components with dynamic backgrounds: keep white */
 }
 
 .rose-pine-dawn .w-4.h-4 {
-	fill: #ebbcba;
+	fill: #A51E36 !important; /* Small icons: red accent, to match branding */
 }
 
 .rose-pine-dawn #chat-input {
-	background: #cecacd;
-	margin: 0.3rem;
-	padding: 0.5rem;
+	background: #F5F2F0 !important; /* Chat input: light, distinct from pure white background */
+	margin: 0.5rem !important;
+	padding: 0.75rem !important;
+	border-radius: 8px !important;
 }
 
 .rose-pine-dawn .bg-gradient-to-t.from-white.dark\:from-gray-800.from-40\%.pb-2 {
-	background: #f2e9e1 !important;
-	padding-top: 0.6rem;
+	background: #FFFFFF !important; /* Background gradient panels */
+	padding-top: 1rem !important;
 }
 
-.rose-pine-dawn
-	.text-white.bg-gray-100.dark\:text-gray-800.dark\:bg-gray-600.disabled.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center {
-	background-color: #cecacd;
-	transition: background-color 0.2s ease-out linear;
+.rose-pine-dawn .text-white.bg-gray-100.dark\:text-gray-800.dark\:bg-gray-600.disabled.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center {
+	background-color: #F5F2F0 !important; /* Disabled button */
+	color: #231F20 !important;
 }
 
-.rose-pine-dawn
-	.bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center {
-	background-color: #286983;
-	transition: background-color 0.2s ease-out linear;
+.rose-pine-dawn .bg-black {
+    background-color: #FFFFFF;
 }
 
-.rose-pine-dawn
-	.bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center
-	> * {
-	fill: #56949f !important;
-	transition: fill 0.2s ease-out linear;
+.tippy-box[data-theme~=dark] {
+	border-radius:var(--radius-lg);
+	border-style:var(--tw-border-style);
+	border-width:1px;
+	border-color:var(--color-gray-900,#FFFFFF) !important;
+	background-color:var(--color-gray-950,#FFFFFF) !important;
+	font-size:var(--text-xs);
+	line-height:var(--tw-leading,var(--text-xs--line-height));
+	--tw-shadow:0 20px 25px -5px var(--tw-shadow-color,#0000001a),0 8px 10px -6px var(--tw-shadow-color,#0000001a);
+	box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)
+  }
+
+.rose-pine-dawn .bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center {
+	background-color: #0678BC !important; /* Active buttons: GRV Blue */
+	color: #FFFFFF !important;
 }
 
-.rose-pine-dawn
-	.w-full.flex.justify-between.rounded-md.px-3.py-2.hover\:bg-gray-900.bg-gray-900.transition.whitespace-nowrap.text-ellipsis {
-	background-color: #56526e;
-	font-weight: bold;
+.rose-pine-dawn .bg-black.text-white.hover\:bg-gray-900.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100.transition.rounded-lg.p-1.mr-0\.5.w-7.h-7.self-center > * {
+	fill: #FEC214 !important; /* Icon inside button: Yellow for emphasis */
+	transition: fill 0.2s ease-out !important;
+}
+
+.rose-pine-dawn .w-full.flex.justify-between.rounded-md.px-3.py-2.hover\:bg-gray-900.bg-gray-900.transition.whitespace-nowrap.text-ellipsis {
+	background-color: #F5F2F0 !important; /* List or selection backgrounds */
+	font-weight: bold !important;
+	color: #231F20 !important;
 }
 
 .rose-pine-dawn .hover\:bg-gray-900:hover {
-	--tw-bg-opacity: 1;
-	background-color: rgb(152 147 165 / var(--tw-bg-opacity));
+	background-color: #E0DFE5 !important; /* Softer hover than harsh black */
 }
 
 .rose-pine-dawn .text-xs.text-gray-700.uppercase.bg-gray-50.dark\:bg-gray-700.dark\:text-gray-400 {
-	background-color: #403d52;
+	background-color: #F5F2F0 !important;
+	color: #231F20 !important;
+	text-transform: uppercase !important;
+	font-size: 0.75rem !important;
 }
 
 .rose-pine-dawn .scrollbar-hidden.relative.overflow-x-auto.whitespace-nowrap.svelte-3g4avz {
-	border-radius: 16px 16px 0 0;
+	border-radius: 16px 16px 0 0 !important; /* Soft rounded tops */
+	background-color: #FFFFFF !important;
 }
 
 .rose-pine-dawn .base.enter.svelte-ug60r4 {
-	background-color: #286983;
+	background-color: #0678BC !important; /* Animation base? Match brand blue */
+	color: #FFFFFF !important;
 }
 
 .rose-pine-dawn .message.svelte-1nauejd {
-	color: #e0def4 !important;
+	color: #231F20 !important; /* Message text: solid readable color */
+	background-color: #F5F2F0 !important;
+	border-radius: 8px !important;
+	padding: 0.75rem !important;
 }
 
 .rose-pine-dawn #dropdownDots {
-	background-color: #dfdad9;
+	background-color: #F5F2F0 !important; /* Dropdown menus */
+	border-radius: 6px !important;
 }
 
 .rose-pine-dawn .flex.py-2\.5.px-3\.5.w-full.hover\:bg-gray-800.transition:hover {
-	background: #cecacd;
+	background: #E0DFE5 !important; /* Hover menu item: lighter grey */
 }
 
-.rose-pine-dawn #dropdownDots {
-	background-color: #dfdad9;
+.rose-pine-dawn .m-auto.rounded-xl.max-w-full.w-\[40rem\].mx-2.bg-gray-50.dark\:bg-gray-900.shadow-3xl {
+	background-color: #FFFFFF !important; /* Card or content panel */
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
 }
 
-.rose-pine-dawn .flex.py-2\.5.px-3\.5.w-full.hover\:bg-gray-800.transition:hover {
-	background: #cecacd;
+.rose-pine-dawn .w-full.rounded.p-4.text-sm.dark\:text-gray-300.dark\:bg-gray-800.outline-none.resize-none {
+	background-color: #F5F2F0 !important;
+	color: #231F20 !important;
 }
 
-.rose-pine-dawn
-	.m-auto.rounded-xl.max-w-full.w-\[40rem\].mx-2.bg-gray-50.dark\:bg-gray-900.shadow-3xl {
-	background-color: #f2e9e1;
+.rose-pine-dawn .w-full.rounded.py-2.px-4.text-sm.dark\:text-gray-300.dark\:bg-gray-800.outline-none.svelte-1vx7r9s {
+	background-color: #F5F2F0 !important;
+	color: #231F20 !important;
 }
 
-.rose-pine-dawn
-	.w-full.rounded.p-4.text-sm.dark\:text-gray-300.dark\:bg-gray-800.outline-none.resize-none {
-	background-color: #cecacd;
+.rose-pine-dawn .px-2\.5.py-2\.5.min-w-fit.rounded-lg.flex-1.md\:flex-none.flex.text-right.transition.bg-gray-200.dark\:bg-gray-700 {
+	background-color: #F5F2F0 !important;
 }
 
-.rose-pine-dawn
-	.w-full.rounded.py-2.px-4.text-sm.dark\:text-gray-300.dark\:bg-gray-800.outline-none.svelte-1vx7r9s {
-	background-color: #cecacd;
-}
-
-.rose-pine-dawn
-	.px-2\.5.py-2\.5.min-w-fit.rounded-lg.flex-1.md\:flex-none.flex.text-right.transition.bg-gray-200.dark\:bg-gray-700 {
-	background-color: #dfdad9;
-}
-
-.rose-pine-dawn
-	.px-2\.5.py-2\.5.min-w-fit.rounded-lg.flex-1.md\:flex-none.flex.text-right.transition.hover\:bg-gray-300.dark\:hover\:bg-gray-800:hover {
-	background-color: #cecacd;
+.rose-pine-dawn .px-2\.5.py-2\.5.min-w-fit.rounded-lg.flex-1.md\:flex-none.flex.text-right.transition.hover\:bg-gray-300.dark\:hover\:bg-gray-800:hover {
+	background-color: #E0DFE5 !important;
 }
 
 .rose-pine-dawn .px-4.py-2.bg-emerald-600.hover\:bg-emerald-700.text-gray-100.transition.rounded {
-	background-color: #56949f;
+	background-color: #268C40 !important; /* "Emerald" button: use GRV Green instead */
+	color: #FFFFFF !important;
 }
 
 .rose-pine-dawn #chat-search > * {
-	background-color: #dfdad9 !important;
+	background-color: #FFFFFF !important;
+	border: 1px solid #F5F2F0 !important;
+	border-radius: 8px !important;
 }
 
 .rose-pine-dawn .svelte-1ee93ns {
-	--primary: #b4637a !important;
-	--secondary: #fffaf3 !important;
+	--primary: #A51E36 !important; /* Red (main primary) */
+	--secondary: #F5F2F0 !important; /* Soft neutral secondary */
 }
 
 .rose-pine-dawn .svelte-11kvm4p {
-	--primary: #56949f !important;
-	--secondary: #fffaf3 !important;
+	--primary: #0678BC !important; /* Blue alternate primary */
+	--secondary: #F5F2F0 !important;
 }
